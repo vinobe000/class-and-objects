@@ -1,0 +1,83 @@
+
+In [2]: class a():
+   ...:     _name="dhoni"
+   ...:     def __init__(self,name,age,salary):
+   ...:         self.__name=name
+   ...:         self.__age=age
+   ...:         self._salary=salary
+   ...:     def displaya(self):
+   ...:         print(self.__name)
+   ...:         print(self.__age)
+   ...:         print(self._salary)
+   ...:
+
+In [3]: class b(a):
+   ...:     def __init__(self,name,age,salary,degree):
+   ...:         super().__init__(name,age,salary)
+   ...:         self.degree=degree
+   ...:     def displayb(self):
+   ...:         print(self.degree)
+   ...:
+
+In [4]: vinoth=b("vino",22,200000,"mechanical")
+
+In [5]: vinoth.displayb()
+mechanical
+
+In [6]: vinoth.displaya()
+vino
+22
+200000
+
+In [7]: class b(a):
+   ...:     def __init__(self,name,age,salary,degree):
+   ...:         super().__init__(name,age,salary)
+   ...:         self.degree=degree
+   ...:     def displayb(self):
+   ...:         print(self.degree)
+   ...:         print(self._salary)
+   ...:         print(a._name)
+   ...:
+
+In [8]: vinoth=b("vino",22,200000,"mechanical")
+
+In [9]: vinoth.displayb()
+mechanical
+200000
+dhoni
+
+In [10]: class b(a):
+    ...:     def __init__(self,name,age,salary,degree):
+    ...:         super().__init__(name,age,salary)
+    ...:         self.degree=degree
+    ...:     def displayb(self):
+    ...:         print(self.degree)
+    ...:
+    ...:
+
+In [11]: class c(b):
+    ...:     def __init__(self,name,age,salary,degree,village):
+    ...:         super().__init__(name,age,salary,degree)
+    ...:         self.village=village
+    ...:     def displayc(self):
+    ...:         print(self.village)
+    ...:         print(self._salary)
+    ...:         print(a._name)
+    ...:
+
+In [12]: vinoth=c("vin",24,200400000,"mech","kamalapuram")
+
+In [13]: vinoth.displayc()
+kamalapuram
+200400000
+dhoni
+
+In [14]: vinoth.displayb()
+mech
+
+In [15]: vinoth.displaya()
+vin
+24
+200400000
+
+In [16]:
