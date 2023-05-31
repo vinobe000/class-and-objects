@@ -1,0 +1,29 @@
+
+In [89]: class flower():
+    ...:     def __init__(self,types,kgs,colour):
+    ...:         self._types=types
+    ...:         self._kgs=kgs
+    ...:         self._colour=colour
+    ...:     def displayflower(self):
+    ...:         print(f"{self._types}")
+    ...:         print(f"{self._kgs}")
+    ...:         print(f"{self._colour}")
+    ...:
+
+In [90]: class marigold(flower):
+    ...:     def __init__(self,types,kgs,colour,quality,price,weight):
+    ...:         super().__init__(types,kgs,colour)
+    ...:         self.quality=quality
+    ...:         self.price=price
+    ...:         self.weight=weight
+    ...:         if(self.weight>10 and self.quality==1):
+    ...:             self.price-=10
+    ...:         elif(self.weight>20 and self.quality==2):
+    ...:             self.price-=20
+    ...:     def display(self):
+    ...:         print(f"quality={self.quality}")
+    ...:         print(f"weight={self.weight}")
+    ...:         print(f"price={self.price}")
+    ...:
+
+In [91]:
