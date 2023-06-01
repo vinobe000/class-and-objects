@@ -1,0 +1,28 @@
+
+In [35]: class flowers():
+    ...:     def __init__(self,varietes,quality,price,weight):
+    ...:         self._varietes=varietes
+    ...:         self._quality=quality
+    ...:         self._price=price
+    ...:         self._weight=weight
+    ...:
+
+In [36]: class marigold(flowers):
+    ...:     def displaymarigold(self):
+    ...:         if(self._varietes=="marigold" and self._quality==1 and self._weight>20):
+    ...:             self._price-=20
+    ...:             print(f"{self._price}")
+    ...:
+    ...:         elif(self._varietes=="marigold" and self._quality==2 and self._weight>10):
+    ...:             self._price-=10
+    ...:             print(f"{self._price}")
+    ...:         else:
+    ...:             print(f"{self._price}")
+    ...:
+
+In [37]: vinoth=marigold("marigold",2,230,30)
+
+In [38]: vinoth.displaymarigold()
+220
+
+In [39]:
