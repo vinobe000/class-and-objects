@@ -1,0 +1,32 @@
+
+In [44]: #polymorphism -method overriding
+
+In [45]: #in this over riding it requires inheritance class parent and child class
+
+In [46]: #both method in parent and child class must have same name and same signature(instance variable
+    ...: s)
+
+In [47]: #but in method overloading it may have different signature
+
+In [48]: class a():
+    ...:     def __init__(self,x,y):
+    ...:         self.x=x
+    ...:         self.y=y
+    ...:     def method(self):
+    ...:         print(self.x*self.y)
+    
+
+
+In [50]: class b(a):
+    ...:     def __init__(self,x,y):
+    ...:         super().__init__(x,y)
+    ...:     def method(self):
+    ...:         print(self.x+self.y)
+    ...:
+
+In [51]: obj=b(12,12)
+
+In [52]: obj.method()
+24
+
+In [53]:
