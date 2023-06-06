@@ -1,0 +1,25 @@
+
+In [37]: class a():
+    ...:     def __init__(self,name,age,city):
+    ...:         self.name=name
+    ...:         self.age=age
+    ...:         self.city=city
+    ...:     def methoda(self):
+    ...:         print(self.name)
+    ...:         print(self.age)
+    ...:     def methoda(self):
+    ...:         print(self.city)
+    ...:
+
+In [38]: #method overloading
+
+In [39]: obj1=a("vinoth",22,"salem")
+
+In [40]: obj1.methoda()
+salem
+
+In [41]: #in this method overloading it only call lastly defined method
+
+In [42]: #method overloading is part of polymorphism
+
+In [43]:#it must have same method name but different signature(instance variables)
